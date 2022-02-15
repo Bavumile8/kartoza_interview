@@ -6,6 +6,7 @@ import rasterio as rio
 import geopandas as gpd
 
 # ------LOGGING------
+# Allows us to get some useful information about how the script has run and the issues that arose.
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -44,7 +45,7 @@ def main(spiky_layer):
     """Run the process to remove the spikes form the gpkg file and export the final output.
     
     Keyword arguments:
-    GeoPackage -- The data to be read in and processed
+    GeoPackage -- The data to be processed (the varaiable containing the read in data of the gpkg file)
     Return: None
     """
     # Check for output dir/Create output dir
